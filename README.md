@@ -10,9 +10,11 @@ In this way, the ROBA Humanoid becomes both a practical assistant and a living s
 
 *(A short video showcasing the ROBA robot's activities will be embedded here.)*
 
-![Roba Robot](placeholder.jpg)
-
-*(A picture of the ROBA robot will be displayed here.)*
+![Roba Robot](Images/Roba-001.png) 
+![Roba Robot 1](Images/Roba-002.png)
+![Roba Robot 2](Images/Writing_A_Moment6.jpg)
+![Roba Robot 3](Images/IMG_2195.JPG)
+ 
 
 ## Features
 
