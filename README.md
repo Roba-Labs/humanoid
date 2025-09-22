@@ -19,6 +19,7 @@ In this way, the ROBA Humanoid becomes both a practical assistant and a living s
 - **Computer Vision:** Equipped with a 3D camera, Roba can perceive its surroundings, detect objects and faces, and track movements.
 - **Advanced Robotics:** Roba has a full range of motion with multiple servo motors controlling its hands, head, and other limbs.
 - **Application-based Framework:** Roba's functionalities are organized into applications, allowing for modular and extensible development.
+- **3D Models Included:** This repository also includes Roba’s 3D model files, which can be used for visualization, simulation, or design purposes; you can extend it with URDF/MJCF scripting.
 
 ## Project Structure
 
