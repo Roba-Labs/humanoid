@@ -8,8 +8,7 @@ In this way, the ROBA Humanoid becomes both a practical assistant and a living s
 
 ## Showcase
 
-<img src="Images/Roba-001.png" width="200" />
-<img src="Images/Roba-002.png" width="200" />
+<img src="Images/Roba-001.png" width="200" /> <img src="Images/Roba-002.png" width="200" />
 <img src="Images/Writing_A_Moment6.jpg" width="200" />
 <img src="Images/IMG_2195.JPG" width="200" />
 
