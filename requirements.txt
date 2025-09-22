@@ -1,0 +1,12 @@
+numpy
+speechrecognition
+soundcard
+chatterbot
+chatterbot-corpus
+wikipedia
+smbus2
+pyserial
+Jetson.GPIO
+pyrealsense2
+opencv-python
+ipython

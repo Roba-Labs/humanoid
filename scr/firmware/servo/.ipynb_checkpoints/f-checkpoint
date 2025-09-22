@@ -1,0 +1,94 @@
+import os
+import sys
+from scservo_sdk import *   # Uses SCServo SDK library
+
+sys.path.insert(1, 'D:/ROBA_Software/roba_bus_servo_python') #path init for find library
+
+# Default setting
+SCS_IDR                 = 43       # SCServo ID : 1
+SCS_IDC                 = 3 
+BAUDRATE                = 115200  # SCServo default baudrate : 1000000
+DEVICENAME              = "COM8"  # Check which port is being used on your controller
+                                  # ex) Windows: "COM1"   Linux: "/dev/ttyUSB0" Mac: "/dev/tty.usbserial-*"
+protocol_end            = 0       # SCServo bit end(STS/SMS=0, SCS=1)
+
+# serial port init 
+portHandler = PortHandler(DEVICENAME)
+packetHandler = PacketHandler(protocol_end) # protocol init
+
+# Open port
+if portHandler.openPort():
+    print("Succeeded to open the port")
+else:
+    print("Failed to open the port")
+
+#Set port baudrate
+if portHandler.setBaudRate(BAUDRATE):
+    print("Succeeded to change the baudrate")
+else:
+    print("Failed to change the baudrate")
+
+#ping
+scs_model_number, scs_comm_result, scs_error = packetHandler.ping(portHandler, SCS_IDR)
+if scs_comm_result != COMM_SUCCESS:
+    print("%s us"  % packetHandler.getTxRxResult(scs_comm_result))
+
+elif scs_error != 0:
+    print("%s er" % packetHandler.getRxPacketError(scs_error))
+else:
+    print("[IDR:%03d] ping Succeeded. SCServo model number : %d" % (SCS_IDR, scs_model_number))
+
+
+#read
+strar = 56
+end = 58
+scs_present_position=0
+for add in range(strar,end):
+    scs_present_position_speed, scs_comm_result, scs_error = packetHandler.read4ByteTxRx(portHandler, SCS_IDR, add)
+    if scs_comm_result != COMM_SUCCESS:
+        print(packetHandler.getTxRxResult(scs_comm_result))
+    elif scs_error != 0:
+        print(packetHandler.getRxPacketError(scs_error))
+
+    scs_present_position += SCS_LOWORD(scs_present_position_speed)
+    #scs_present_speed = SCS_HIWORD(scs_present_position_speed)
+print("[MHP:%03d]" % (scs_present_position))
+
+data, result,error = packetHandler.readTxRx(portHandler, SCS_IDR, 55,1)
+#data1 = SCS_MAKEWORD(data[0], data[1]) if (result == COMM_SUCCESS) else 0
+print(data)
+
+
+scs_comm_result, scs_error = packetHandler.write4ByteTxRx(portHandler,SCS_IDR,55,0 )
+if scs_comm_result != COMM_SUCCESS:
+    print("%s" % packetHandler.getTxRxResult(scs_comm_result))
+elif scs_error != 0:
+    print("%s" % packetHandler.getRxPacketError(scs_error))
+print(scs_comm_result, scs_error)
+
+
+data, result,error = packetHandler.readTxRx(portHandler,SCS_IDR, 55,1)
+#data1 = SCS_MAKEWORD(data[0], data[1]) if (result == COMM_SUCCESS) else 0
+print(data)
+
+scs_comm_result, scs_error = packetHandler.write1ByteTxRx(portHandler,SCS_IDR,5,SCS_IDC )
+if scs_comm_result != COMM_SUCCESS:
+    print("%s" % packetHandler.getTxRxResult(scs_comm_result))
+elif scs_error != 0:
+    print("%s" % packetHandler.getRxPacketError(scs_error))
+print(scs_comm_result, scs_error)
+
+scs_comm_result, scs_error = packetHandler.write4ByteTxRx(portHandler,SCS_IDC,55,1)
+if scs_comm_result != COMM_SUCCESS:
+    print("%s" % packetHandler.getTxRxResult(scs_comm_result))
+elif scs_error != 0:
+    print("%s" % packetHandler.getRxPacketError(scs_error))
+print(scs_comm_result, scs_error)
+
+
+data, result,error = packetHandler.readTxRx(portHandler,SCS_IDC, 55,1)
+#data1 = SCS_MAKEWORD(data[0], data[1]) if (result == COMM_SUCCESS) else 0
+print(data)
+
+
+portHandler.closePort()
