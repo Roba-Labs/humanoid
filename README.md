@@ -72,8 +72,8 @@ This will initialize the robot's systems and start the conversational AI.
 
 ## Contributing
 
-- **Explore [open issues](https://github.com/roba-labs/roba-humanoid/issues)** — find something interesting to work on.  
-- **Become part of the community** on the [ROBA DC]((https://discord.com/invite/6SmRszzA)) — share your project, ask questions, or discuss ideas in your preferred language.  
+- **Explore [open issues](https://github.com/Roba-Labs/humanoid/issues)** — find something interesting to work on.  
+- **Become part of the community** on the [ROBA DC](https://discord.com/invite/6SmRszzA) — share your project, ask questions, or discuss ideas in your preferred language.  
 
 ### Community Philosophy
 
