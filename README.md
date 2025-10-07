@@ -1,15 +1,23 @@
-# Roba Robot
+ROBA Humanoid
+===================
 
-The ROBA AI Humanoid Robot is an early-stage prototype that demonstrates the first step toward our larger vision of Design-to-Doorstep Robotics. Even in its current form, it highlights how AI and robotics can merge to create a companion that walks, interacts, and assists in daily tasks. It can speak naturally, recognize faces and objects, navigate a mapped environment, and perform simple demonstrations such as grasping, cutting, or writing. These are not the end goals but the foundation for what comes next.
+Roba Humanoid is an open-source and 3D printed humanoid robot. Optimized for research purposes, its modularity allows for a wide range of applications and tests.
 
-Aligned with our decentralized AI platform, ROBA-Studio — the next-gen simulator — and the open developer platform, ROBA Creator Hub, in line with our long-term vision. this humanoid is more than a standalone prototype — it is a flagship embodiment of the ROBA Developer Hub ecosystem. As the platform also evolves with cloud-first simulation, template libraries, and a marketplace of reusable robotics assets, the humanoid will continuously integrate these cutting-edge modules. Future versions will feature advanced actuators for smoother motion, multimodal sensing for richer perception, and large AI models for adaptive dialogue and task planning. Developers from around the world will be able to contribute new “skills” — from navigation to manipulation — through ROBA-Studio, instantly upgrading the humanoid’s abilities.
 
-In this way, the ROBA Humanoid becomes both a practical assistant and a living showcase of the ROBALABs vision: a future where anyone can design a robot brain in the hub, select a humanoid shell, and have it delivered, ready to operate in the real world. 
+![Trunk Assembled](Images/tg_image_329837944.png)
 
-## Showcase
+### Open Source
 
-<img src="Images/Roba-001.png" width="200" /> <img src="Images/tg_image_329837944.png" width="200" />
+All the tech and models found in this repository are available under open source licenses.
 
+## License Overview
+
+|   License     |     Hardware    |   Software      |
+| ------------- | :-------------: | :-------------: |
+| Title  | [Creative Commons BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)  | [GPL v3](http://www.gnu.org/licenses/gpl.html)  |
+| Logo  | [![Creative Commons BY-SA](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) | [![GPL V3](https://www.gnu.org/graphics/gplv3-88x31.png)](http://www.gnu.org/licenses/gpl.html) |
+
+**Please keep references to [ROBA Labs (https://www.robalabs.com/)]**
 
 
 ## Features
@@ -64,4 +72,13 @@ This will initialize the robot's systems and start the conversational AI.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue to discuss your ideas.
+- **Explore [open issues](https://github.com/roba-labs/roba-humanoid/issues)** — find something interesting to work on.  
+- **Become part of the community** on the [ROBA DC]((https://discord.com/invite/6SmRszzA)) — share your project, ask questions, or discuss ideas in your preferred language.  
+
+### Community Philosophy
+
+ROBA Humanoid connects researchers, developers, and creators from diverse backgrounds.  
+Our goal is to advance **open, modular, and ethical robotics** by combining engineering excellence with creativity and inclusivity.  
+We encourage discussions, experiments, and new ideas — no contribution is too small.
+
+> “Open-source robotics means open minds.” — ROBA Labs
